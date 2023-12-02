@@ -1,4 +1,4 @@
-package pollub.address_book.services;
+package pollub.address_book.services.Auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,7 +20,7 @@ import java.util.Set;
 
 @Service
 @Transactional
-public class AuthenticationService {
+public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Autowired
     private UserRepository userRepository;
@@ -37,6 +37,7 @@ public class AuthenticationService {
     @Autowired
     private TokenService tokenService;
 
+    @Override
     public ApplicationUser registerUser(String username, String password) {
 
         String encodedPassword = passwordEncoder.encode(password);
@@ -49,6 +50,7 @@ public class AuthenticationService {
         return userRepository.save(new ApplicationUser(0, username, encodedPassword, authorities));
     }
 
+    @Override
     public LoginResponseDTO loginUser(String username, String password) {
 
         try {

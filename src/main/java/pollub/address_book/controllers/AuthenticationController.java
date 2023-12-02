@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import pollub.address_book.models.ApplicationUser;
 import pollub.address_book.models.LoginResponseDTO;
 import pollub.address_book.models.RegistrationDTO;
-import pollub.address_book.services.AuthenticationService;
+import pollub.address_book.services.Auth.AuthenticationService;
 
 @RestController
 @RequestMapping("/auth")
