@@ -13,6 +13,7 @@ import pollub.address_book.models.LoginResponseDTO;
 import pollub.address_book.models.Role;
 import pollub.address_book.repository.RoleRepository;
 import pollub.address_book.repository.UserRepository;
+import pollub.address_book.services.Token.TokenService;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package pollub.address_book.services;
+package pollub.address_book.services.Token;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional
-public class TokenService {
+public class TokenServiceImpl implements TokenService {
 
     @Autowired
     private JwtEncoder jwtEncoder;
@@ -23,6 +23,7 @@ public class TokenService {
     @Autowired
     private JwtDecoder jwtDecoder;
 
+    @Override
     public String generateJwt(Authentication auth) {
 
         Instant now = Instant.now();
