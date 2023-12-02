@@ -1,4 +1,4 @@
-package pollub.address_book.services;
+package pollub.address_book.services.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
