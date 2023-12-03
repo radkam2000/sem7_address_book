@@ -7,7 +7,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pollub.address_book.models.ApplicationUser;
 import pollub.address_book.repository.UserRepository;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -25,6 +28,10 @@ public class UserService implements UserDetailsService {
         System.out.println("In the user details service");
 
         return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("user is not valid"));
+    }
+
+    public List<ApplicationUser> getAllUsers() {
+        return userRepository.findAll();
     }
 
 }
