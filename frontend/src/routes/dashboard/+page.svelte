@@ -33,10 +33,14 @@
 		phoneNumber: ''
 	};
 
+	const token = $data.jwt;
+
 	const URL = 'http://localhost:8000/api/contacts';
 	let contactData = [];
 	const getData = async () => {
-		contactData = await (await fetch(URL, { method: 'GET' })).json();
+		contactData = await (
+			await fetch(URL, { method: 'GET', headers: { Authorization: 'Bearer ' + token } })
+		).json();
 	};
 
 	onMount(async () => getData());
@@ -46,7 +50,8 @@
 		const res = await fetch(URL, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				Authorization: 'Bearer ' + token
 			},
 			body: await JSON.stringify(record)
 		});
@@ -61,7 +66,8 @@
 		const res = await fetch(URL + '/' + editedContact.id, {
 			method: 'PUT',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				Authorization: 'Bearer ' + token
 			},
 			body: await JSON.stringify(editedContact)
 		});
@@ -72,7 +78,8 @@
 
 	async function delet(id) {
 		const res = await fetch(URL + '/' + id, {
-			method: 'DELETE'
+			method: 'DELETE',
+			Authorization: 'Bearer ' + token
 		});
 		console.log(res);
 		show_toast(res.status);
