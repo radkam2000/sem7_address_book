@@ -1,6 +1,7 @@
 package pollub.address_book.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -30,8 +31,10 @@ public class Contact {
     @Size(min = 3, message = "Address too short")
     private String address;
     @NotNull(message = "Building number cannot be empty")
+    @Digits(integer = 3, fraction = 0, message = "Wrong building number")
     private Integer buildingNumber;
     @NotNull(message = "Building number cannot be empty")
+    @Digits(integer = 4, fraction = 0, message = "Wrong flat number")
     private Integer flatNumber;
     @NotBlank(message = "Building number cannot be empty")
     @NotNull(message = "Building number cannot be empty")

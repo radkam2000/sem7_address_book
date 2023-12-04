@@ -15,12 +15,14 @@ public class BadRequestExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException e) {
-        Map<String, String> errors = new HashMap<>();
+        Map<String, String> response = new HashMap<>();
         e.getBindingResult().getAllErrors().forEach((error) -> {
+            boolean isCustom = true;
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
-            errors.put(fieldName, errorMessage);
+            response.put(fieldName, errorMessage);
         });
-        return errors;
+        response.put("isCustom", "true");
+        return response;
     }
 }
