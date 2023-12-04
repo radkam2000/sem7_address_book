@@ -55,9 +55,20 @@
 			},
 			body: await JSON.stringify(record)
 		});
-
-		console.log(res);
-		show_toast(res.status);
+		var resBody = await res.json();
+		if (res.status == 400 && resBody.isCustom == 'true') {
+			var msg = res.status + ': ';
+			delete resBody.isCustom;
+			for (var key in resBody) {
+				msg += resBody[key] + ', ';
+			}
+			show_toast(msg);
+		} else if (res.status == 400) {
+			show_toast(res.status + ' Type error');
+		}
+		if (res.status == 200) {
+			show_toast(res.status + ' Success', 'variant-filled-secondary');
+		}
 		await getData();
 	}
 
@@ -71,8 +82,20 @@
 			},
 			body: await JSON.stringify(editedContact)
 		});
-		console.log(res);
-		show_toast(res.status);
+		var resBody = await res.json();
+		if (res.status == 400 && resBody.isCustom == 'true') {
+			var msg = res.status + ': ';
+			delete resBody.isCustom;
+			for (var key in resBody) {
+				msg += resBody[key] + ', ';
+			}
+			show_toast(msg);
+		} else if (res.status == 400) {
+			show_toast(res.status + ' Type error');
+		}
+		if (res.status == 200) {
+			show_toast(res.status + ' Success', 'variant-filled-secondary');
+		}
 		await getData();
 	}
 
@@ -81,8 +104,9 @@
 			method: 'DELETE',
 			Authorization: 'Bearer ' + token
 		});
-		console.log(res);
-		show_toast(res.status);
+		if (res.status == 404) {
+			show_toast('404 Not Found');
+		}
 		await getData();
 	}
 
