@@ -1,4 +1,4 @@
-package pollub.address_book.services.Auth;
+package pollub.address_book.service.Auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -8,12 +8,12 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pollub.address_book.models.ApplicationUser;
-import pollub.address_book.models.LoginResponseDTO;
-import pollub.address_book.models.Role;
+import pollub.address_book.dto.LoginResponseDTO;
+import pollub.address_book.model.ApplicationUser;
+import pollub.address_book.model.Role;
 import pollub.address_book.repository.RoleRepository;
 import pollub.address_book.repository.UserRepository;
-import pollub.address_book.services.Token.TokenService;
+import pollub.address_book.service.Token.TokenService;
 
 import java.util.HashSet;
 import java.util.Set;

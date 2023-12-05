@@ -115,7 +115,7 @@
 	function show_toast(
 		message,
 		background = 'variant-filled-primary',
-		timeout = 10000,
+		timeout = 5000,
 		autohide = true,
 		hideDismiss = false
 	) {

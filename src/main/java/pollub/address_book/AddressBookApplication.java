@@ -5,8 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import pollub.address_book.models.ApplicationUser;
-import pollub.address_book.models.Role;
+import pollub.address_book.model.ApplicationUser;
+import pollub.address_book.model.Role;
 import pollub.address_book.repository.RoleRepository;
 import pollub.address_book.repository.UserRepository;
 

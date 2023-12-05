@@ -1,4 +1,4 @@
-package pollub.address_book.models;
+package pollub.address_book.dto;
 
 public class RegistrationDTO {
     private String username;

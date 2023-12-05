@@ -1,6 +1,6 @@
-package pollub.address_book.services.Contact;
+package pollub.address_book.service.Contact;
 
-import pollub.address_book.models.Contact;
+import pollub.address_book.model.Contact;
 
 import java.util.List;
 

@@ -1,4 +1,6 @@
-package pollub.address_book.models;
+package pollub.address_book.dto;
+
+import pollub.address_book.model.ApplicationUser;
 
 public class LoginResponseDTO {
     private ApplicationUser user;

@@ -1,4 +1,4 @@
-package pollub.address_book.services.Token;
+package pollub.address_book.service.Token;
 
 import org.springframework.security.core.Authentication;
 

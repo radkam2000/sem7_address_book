@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import pollub.address_book.utils.KeyGeneratorUtility;
-import pollub.address_book.utils.RSAKeyProperties;
+import pollub.address_book.util.KeyGeneratorUtility;
+import pollub.address_book.util.RSAKeyProperties;
 
 import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;

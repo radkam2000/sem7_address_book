@@ -12,8 +12,8 @@ import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import pollub.address_book.models.ApplicationUser;
-import pollub.address_book.models.Role;
+import pollub.address_book.model.ApplicationUser;
+import pollub.address_book.model.Role;
 import pollub.address_book.repository.RoleRepository;
 import pollub.address_book.repository.UserRepository;
 

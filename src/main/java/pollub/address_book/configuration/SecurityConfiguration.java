@@ -25,7 +25,7 @@ import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
-import pollub.address_book.utils.RSAKeyProperties;
+import pollub.address_book.util.RSAKeyProperties;
 
 @Configuration
 @EnableWebSecurity

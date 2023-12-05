@@ -1,11 +1,11 @@
-package pollub.address_book.controllers;
+package pollub.address_book.controller;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pollub.address_book.models.Contact;
-import pollub.address_book.services.Contact.ContactService;
+import pollub.address_book.model.Contact;
+import pollub.address_book.service.Contact.ContactService;
 
 import java.util.List;
 

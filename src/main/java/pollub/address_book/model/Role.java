@@ -1,4 +1,4 @@
-package pollub.address_book.models;
+package pollub.address_book.model;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;

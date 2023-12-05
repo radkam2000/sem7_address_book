@@ -1,7 +1,7 @@
-package pollub.address_book.services.Auth;
+package pollub.address_book.service.Auth;
 
-import pollub.address_book.models.ApplicationUser;
-import pollub.address_book.models.LoginResponseDTO;
+import pollub.address_book.dto.LoginResponseDTO;
+import pollub.address_book.model.ApplicationUser;
 
 public interface AuthenticationService {
     public ApplicationUser registerUser(String username, String password);

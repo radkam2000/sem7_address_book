@@ -1,10 +1,10 @@
-package pollub.address_book.services.Contact;
+package pollub.address_book.service.Contact;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
-import pollub.address_book.models.Contact;
+import pollub.address_book.model.Contact;
 import pollub.address_book.repository.ContactRepository;
 
 import java.util.List;

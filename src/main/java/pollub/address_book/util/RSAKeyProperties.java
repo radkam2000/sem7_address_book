@@ -1,4 +1,4 @@
-package pollub.address_book.utils;
+package pollub.address_book.util;
 
 import org.springframework.stereotype.Component;
 
